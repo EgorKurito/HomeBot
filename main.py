@@ -1,5 +1,5 @@
 # Import libraries and packages
-import config, bot
+import config, bot, weather
 import logging
 
 from telegram import *
@@ -8,6 +8,8 @@ from pyowm import *
 
 # Main variable
 updater = Updater(token=config.BOT_TOKEN)
+
+owm = OWM(config.WEATHER_TOKEN, language = 'ru')
 
 # Bot authentication
 root = logging.getLogger()
@@ -23,6 +25,7 @@ def main():
 
     dp.add_handler(CommandHandler('start', bot.start))
     dp.add_handler(MessageHandler(Filters.location, bot.loca))
+    dp.add_handler(CallbackQueryHandler(callback = bot.first_callback))
     #dp.add_handler(MessageHandler(Filters.text, bot.loca))
     #dp.add_handler(CallbackQueryHandler(bot.callback))
 

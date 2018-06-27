@@ -1,5 +1,7 @@
 # Import libraries and packages
 import main, config, crypto, weather
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineKeyboardButton, \
+    InlineKeyboardMarkup
 
 from telegram import *
 from telegram.ext import *

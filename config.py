@@ -1,7 +1,7 @@
 #Bot Token
-BOT_TOKEN = '455490468:AAE4xJccf3GGJB_NK8wNH6EFnnn2HSJMATE'
+BOT_TOKEN = 'Bot Token'
 # Weather API token
-WEATHER_TOKEN = 'a66952168b007928153234c13aa8970d'
+WEATHER_TOKEN = 'Weather Api Token'
 #URL
 url = 'https://api.bitfinex.com/v1/pubticker/'
 

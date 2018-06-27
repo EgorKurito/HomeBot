@@ -1,6 +1,7 @@
 import config
 import requests
 
+
 class BitFinex:
     def __init__(self, url):
         self.url = config.url + url
@@ -13,9 +14,9 @@ class BitFinex:
         return mid
 
     def low(self):
-        low =   eval(requests.get(self.url, timeout=1).text).get('low')
+        low = eval(requests.get(self.url, timeout=1).text).get('low')
         return low
 
     def high(self):
-        high =   eval(requests.get(self.url, timeout=1).text).get('high')
+        high = eval(requests.get(self.url, timeout=1).text).get('high')
         return high

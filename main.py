@@ -1,5 +1,7 @@
 # Import libraries and packages
-import config, bot, weather
+import config
+import bot
+import weather
 import logging
 
 from telegram import *
@@ -15,8 +17,9 @@ owm = OWM(config.WEATHER_TOKEN, language='ru')
 root = logging.getLogger()
 root.setLevel(logging.INFO)
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO)
 
 logger = logging.getLogger(__name__)
 
